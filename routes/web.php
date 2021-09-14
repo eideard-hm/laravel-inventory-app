@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
-use App\Models\Product;
+use App\Http\Controllers\InvoiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -95,6 +95,12 @@ Route::get(
     'categories/delete/{id}',
     [CategoryController::class, 'delete']
 )->name('category.delete');
+
+//ruta para detalle de factura
+Route::get(
+    '/invoices',
+    [InvoiceController::class, 'show']
+)->name('invoiceDetail.show');
 
 //==================== Rutas de autenticación ============================
 
