@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Edier Hernández',
                 'email' => 'edierhernandezmo@gmail.com',
-                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi' // password
+                'password' => '$2y$10$YtkLgE.hUq/zcGJcY2Hy2enGpRiF5CO7f9PHzeeUEL6h.2MFOd79G' // password
             ]
         );
     }

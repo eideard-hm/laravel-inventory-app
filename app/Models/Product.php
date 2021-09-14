@@ -9,11 +9,19 @@ class Product extends Model
 {
     use HasFactory;
 
-    function brand(){
+    function brand()
+    {
         return $this->belongsTo(Brand::class);
     }
 
-    function category(){
+    function category()
+    {
         return $this->belongsTo(Category::class);
+    }
+
+    //relacion de muchos a muchos
+    function invoice()
+    {
+        return $this->belongsToMany(Invoice::class, 'invoice_details');
     }
 }
