@@ -18,13 +18,9 @@ class DatabaseSeeder extends Seeder
             BrandSeeder::class,
             CategorySeeder::class,
             ProductSeeder::class,
-<<<<<<< HEAD
-            UserSeeder::class
-=======
             UserSeeder::class,
             InvoiceSeeder::class,
             InvoiceDetailSeeder::class
->>>>>>> categorias
         ]);
     }
 }
