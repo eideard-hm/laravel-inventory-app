@@ -3,7 +3,8 @@
 @section('encabezado', 'Detalles de factura')
 @section('content')
     <div class="text-center">
-        <table class="table table-dark table-striped table-hover">
+        <a class="btn btn-primary" href="{{ route('invoice.form') }}">Nueva Factura</a>
+        <table class="table table-dark table-striped table-hover mt-2">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -62,12 +63,24 @@
                                     <div class="row">
                                         <div class="col-sm-6"></div>
                                         <div class="col-sm-3"><strong>Subtotal:</strong></div>
-                                        <div class="col-sm-3"><strong>{{ $invoice->subtotal }}</strong></div>
+                                        <div class="col-sm-3">
+                                            <strong>$ {{ number_format($invoice->subtotal, 0, ',', '.') }}</strong>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6"></div>
+                                        <div class="col-sm-3"><strong>IVA:</strong></div>
+                                        <div class="col-sm-3">
+                                            <strong>$
+                                                {{ number_format($invoice->total - $invoice->subtotal, 0, ',', '.') }}</strong>
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6"></div>
                                         <div class="col-sm-3"><strong>Total:</strong></div>
-                                        <div class="col-sm-3"><strong>{{ $invoice->total }}</strong></div>
+                                        <div class="col-sm-3">
+                                            <strong>$ {{ number_format($invoice->total, 0, ',', '.') }}</strong>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">

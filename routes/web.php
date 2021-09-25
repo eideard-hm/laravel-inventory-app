@@ -102,6 +102,16 @@ Route::get(
     [InvoiceController::class, 'show']
 )->name('invoiceDetail.show');
 
+Route::get(
+    '/invoice/form',
+    [InvoiceController::class, 'form']
+)->name('invoice.form');
+
+Route::post(
+    '/invoice/add',
+    [InvoiceController::class, 'save']
+)->name('invoice.save');
+
 //==================== Rutas de autenticación ============================
 
 Auth::routes();
